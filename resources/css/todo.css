@@ -1,0 +1,55 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.navDec{
+  text-shadow: 3px 3px 3px #ababab;
+  color: rgb(128, 80, 17);
+  padding: 2rem;
+
+}
+.font{
+    font-family: "Sofia", sans-serif;
+    font-size: 3.5rem;
+}
+.bgColor{
+    background-color: antiquewhite;   
+}
+.container1{
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../images/2018-Blog-Diaries.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.menu{
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.weatherForm input,button{
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 5px;
+}
+.weatherForm button{
+    border-radius: 5px;
+}
+
+.todo{
+    background-color: rgb(245, 207, 200);
+   
+}
+.inprogress{
+    background-color: rgba(245, 245, 60, 0.589);
+}
+
+.done{
+    background-color: rgb(168, 207, 193);
+}
+.brdr{
+    border: 3px solid red;
+}
+.addTaskm{
+    background-color: rgb(229, 239, 241);
+}
