@@ -191,7 +191,7 @@ const element=tasksList[i];
     
             if(event.target.classList.contains("done-button")){
                 let parentTask = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-                console.log(parentTask);
+                console.log("parent task"+JSON.stringify(parentTask));
                 const taskId = Number(parentTask.dataset.taskId);
                 const task = newtaskManager.getTaskById(taskId);
                 //alert(task)

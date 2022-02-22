@@ -1,6 +1,6 @@
 function createTaskHtml(id, name, description, assignedTo, dueDate, status) {
     var listModal = `<li class="list-unstyled p-2" data-task-id="${id}">
-    <div class="card border-info">
+    <div class="card ">
       <div class="card-body ${
         status === "TO DO"
           ? "todo"
@@ -73,9 +73,8 @@ class TaskManager {
    let tasksHtmlList3 = [];
 
     console.log("this.tasks " + this.tasks)
-    for (let i = 0; i < this.tasks.length; ++i) {
-      const task = this.tasks[i]
-      //console.log("task from tasks"+task)
+    
+    this.tasks.forEach(task => {
       let dateArray = task.dueDate.split("-")
       let newDate = dateArray[2] + '/' + dateArray[1] + '/' + dateArray[0]
 
@@ -92,8 +91,11 @@ class TaskManager {
       if(task.status ==="DONE"){
         tasksHtmlList3.push(taskHtml);
       }
+
+    });
       
-    }
+      
+  
     const sortedActivities = tasksHtmlList1.slice().sort((a, b) => b.date - a.date)
 
     const tasks1Html = sortedActivities.join("\n");
