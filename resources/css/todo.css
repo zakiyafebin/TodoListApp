@@ -53,3 +53,8 @@
 .addTaskm{
     background-color: rgb(229, 239, 241);
 }
+.footerMain{
+    text-align: center;
+    padding: 4rem;
+    border-top: 1px solid grey;
+  }
