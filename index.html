@@ -169,36 +169,36 @@
 
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" class="form-control" id="name">
+              <input type="text" class="form-control" id="editName">
             </div>
             <div class="form-group">
               <label for="description">Description:</label>
-              <textarea class="form-control" id="description" rows="2"></textarea>
+              <textarea class="form-control" id="editDescription" rows="2"></textarea>
             </div>
 
             <div class="form-group">
               <label for="assignedto">Assigned To:</label>
-              <input type="text" class="form-control" id="assignedto">
+              <input type="text" class="form-control" id="editAssignedto">
             </div>
 
             <div class="form-group">
               <label for="duedate">Due Date:</label>
-              <input type="date" class="form-control" id="duedate" placeholder="dd/mm/yyyy">
+              <input type="date" class="form-control" id="editDuedate" placeholder="dd/mm/yyyy">
             </div>
 
             <div class="form-group">
               <label for="status">Status</label>
-              <select id="status" class="form-control">
+              <select id="editStatus" class="form-control">
                 <!-- <option selected>Choose...</option> -->
-                <option value="To Do">To Do</option>
-                <option value="In Progress">In Progress</option>
+                <option value="TO DO">To Do</option>
+                <option value="IN PROGRESS">In Progress</option>
                 <!-- <option value="Review">Review</option> -->
-                <option value="Done">Done</option>
+                <option value="DONE">Done</option>
               </select>
             </div>
             <div class="modal-footer">
               <input class="btn btn-success" type="reset" value="Reset">
-              <button type="submit" class="btn btn-success ">Submit</button>
+              <button type="submit" id="editSubmit" class="btn btn-success ">Submit</button>
             </div>
           </form>
 

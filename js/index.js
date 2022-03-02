@@ -134,7 +134,7 @@ function validFormFieldInput(fullname, description, assignedTo, dueDate, status)
     else { //if all validates creates a task
         newtaskManager.addTask(fullname.value, description.value, assignedTo.value, dueDate.value, status.value);
         swal({
-            title: "Great!",
+            title: "Success!",
             text: "New Task has been added!",
             icon: "success",
           });   
@@ -184,6 +184,9 @@ function clearFormFields(fullname, description, assignedTo, dueDate, status) {
 
 };
 
+//edit fields
+
+
 const tasksList = document.querySelectorAll("#ulTodo, #ulInprogress, #ulDone");
 for(let i =0; i<tasksList.length;++i){
 const element=tasksList[i];
@@ -226,6 +229,45 @@ const element=tasksList[i];
             // const task = newtaskManager.getTaskById(taskId);
             
             }
+
+            //Edit button 
+            if(event.target.classList.contains("edit-button")){
+                let parentTask = event.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+                console.log("parent task"+JSON.stringify(parentTask));
+                const taskId = Number(parentTask.dataset.taskId);
+                const task = newtaskManager.getTaskById(taskId);
+                alert(JSON.stringify(task))
+                let editName = document.getElementById("editName");
+            let editDescription = document.getElementById("editDescription");
+            let editAssignedto = document.getElementById("editAssignedto");
+            let editDuedate = document.getElementById("editDuedate");
+            let editStatus = document.getElementById("editStatus"); 
+                   
+                editName.value = task.name;
+                editDescription.value = task.description;
+                editAssignedto.value = task.assignedTo;
+                editDuedate.value = task.dueDate;
+                editStatus.value = task.status;
+                const element1 = document.getElementById('editSubmit')
+                element1.addEventListener("click", editChanges);
+                function editChanges(){
+                    task.name = editName.value 
+                    task.description = editDescription.value
+                    task.assignedTo =editAssignedto.value;
+                    task.dueDate = editDuedate.value ;
+                    task.status = editStatus.value;
+                    
+                    newtaskManager.render();
+                    newtaskManager.save();
+                }
+               // newtaskManager.render();
+                
+
+                // edit values
+                
+            }
+
+
     });
 
 }   

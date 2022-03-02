@@ -26,7 +26,7 @@ function createTaskHtml(id, name, description, assignedTo, dueDate, status) {
         <p> ${description}</p>
         <div class="card-footer text-center" >
             <p>
-            <button  class="btn btn-sm btn-success"data-toggle="modal" data-target="#editTaskModal">
+            <button  class="btn btn-sm btn-success edit-button"data-toggle="modal" data-target="#editTaskModal">
         EDIT </button>
             <button class="btn btn-success btn-sm done-button
             ${ status != "DONE" ? "visible" : "invisible"}"
